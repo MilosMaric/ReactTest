@@ -1,4 +1,4 @@
-.activity {
+.flex-centered {
     background-color: whitesmoke;
     display: flex;
     align-items: center;
@@ -6,5 +6,13 @@
 }
 
 .user-avatar {
-    margin-right: 5px;
+    margin-right: 15px;
+    height: 35px;
+    width: 35px;
+}
+
+.add-activity-button {
+    margin-right: 10px;
+    height: 20px;
+    width: 20px;
 }

@@ -9,7 +9,7 @@ function App() {
     })
 
     return (
-        <ActivityFeed activities={activities}/>
+        <ActivityFeed initialActivities={activities}/>
     );
 }
 
