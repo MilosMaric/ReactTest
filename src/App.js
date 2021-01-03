@@ -1,25 +1,16 @@
-import logo from './logo.svg';
 import './App.css';
+import ActivityFeed from "./components/ActivityFeed";
+import {ActivitiesModel} from "./data/ActivityMockData";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const activities = [...ActivitiesModel.activities].map(a => {
+        a.user = ActivitiesModel.users.filter(u => u.id === a.userId)[0];
+        return a;
+    })
+
+    return (
+        <ActivityFeed activities={activities}/>
+    );
 }
 
 export default App;

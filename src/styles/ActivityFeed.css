@@ -1,0 +1,10 @@
+.activity {
+    background-color: whitesmoke;
+    display: flex;
+    align-items: center;
+    padding: 5px 10px
+}
+
+.user-avatar {
+    margin-right: 5px;
+}
