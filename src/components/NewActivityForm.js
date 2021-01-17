@@ -11,7 +11,6 @@ const NewActivityForm = ({handleSubmit}) => {
         return () => stateSetter(e.target.value);
     }
 
-    //TODO: Add test for activity adding.
     const onSubmit = (e) => {
         e.preventDefault();
         handleSubmit({type, url, note});

@@ -4,21 +4,14 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {Provider} from "react-redux";
-import {createStore} from "redux";
-import counterReducer from "./reducers/activities";
-import {devToolsEnhancer} from 'redux-devtools-extension';
 import Modal from 'react-modal';
-
-const store = createStore(counterReducer, devToolsEnhancer({}));
-window.store = store;
+import store from "./stores/store";
 
 Modal.setAppElement('#root');
 
 ReactDOM.render(
     <Provider store={store}>
-        <React.StrictMode>
-            <App/>
-        </React.StrictMode>
+        <App/>
     </Provider>,
     document.getElementById('root')
 );
