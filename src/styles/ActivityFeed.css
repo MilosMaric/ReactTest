@@ -1,5 +1,9 @@
-.flex-centered {
+body {
     background-color: whitesmoke;
+    margin: 1%;
+}
+
+.flex-centered {
     display: flex;
     align-items: center;
     padding: 5px 10px
@@ -15,4 +19,28 @@
     margin-right: 10px;
     height: 20px;
     width: 20px;
+}
+
+.add-activity-button-container {
+    margin-bottom: 15px;
+}
+
+.add-activity-modal-heading {
+    background-color: indianred;
+    padding: 10px 15px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+.add-activity-modal-heading-close-button {
+    cursor: pointer;
+}
+
+.activities-table {
+    border: 1px solid lightgray;
+}
+
+.activity-item:not(:last-child) {
+    border-bottom: 1px solid lightgray;
 }

@@ -7,9 +7,12 @@ import {Provider} from "react-redux";
 import {createStore} from "redux";
 import counterReducer from "./reducers/activities";
 import {devToolsEnhancer} from 'redux-devtools-extension';
+import Modal from 'react-modal';
 
 const store = createStore(counterReducer, devToolsEnhancer({}));
 window.store = store;
+
+Modal.setAppElement('#root');
 
 ReactDOM.render(
     <Provider store={store}>

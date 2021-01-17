@@ -4,3 +4,26 @@
     margin: 20px 50px;
     height: 40%;
 }
+
+.new-activity-form-input {
+    padding: 5px;
+    margin: 10px 0;
+}
+
+.new-activity-form-submit-button {
+    width: 50%;
+    color: white;
+    background-color: deepskyblue;
+    padding: 5px;
+    border-width: 0;
+    border-radius: 5px;
+}
+
+.new-activity-form-submit-button-container {
+    display: flex;
+    justify-content: center;
+}
+
+textarea.new-activity-form-input {
+    min-height: 100px;
+}

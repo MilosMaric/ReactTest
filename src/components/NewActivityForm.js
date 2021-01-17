@@ -18,15 +18,26 @@ const NewActivityForm = ({handleSubmit}) => {
     }
     return (
         <form className="new-activity-form" onSubmit={onSubmit}>
-            <select onChange={e => generateOnChangeCallback({e, stateSetter: setType})()} value={type}>
+            <select onChange={e => generateOnChangeCallback({e, stateSetter: setType})()} value={type}
+                    className='new-activity-form-input'>
                 {Object.entries(ActivityType).map(([key, value]) => {
                     return (<option value={key} key={key}> {value} </option>)
                 })}
             </select>
-            <input type="text" onChange={e => generateOnChangeCallback({e, stateSetter: setUrl})()} value={url}/>
-            <textarea cols="30" rows="5" onChange={e => generateOnChangeCallback({e, stateSetter: setNote})()}
-                      value={note}/>
-            <button type="submit">Submit</button>
+            <input className='new-activity-form-input'
+                   type="text"
+                   placeholder='Add property URL (optional)'
+                   onChange={e => generateOnChangeCallback({e, stateSetter: setUrl})()}
+                   value={url}/>
+            <textarea cols="30"
+                      rows="5"
+                      placeholder='Add notes...'
+                      onChange={e => generateOnChangeCallback({e, stateSetter: setNote})()}
+                      value={note}
+                      className='new-activity-form-input'/>
+            <div className='new-activity-form-submit-button-container'>
+                <button type="submit" className='new-activity-form-submit-button'>Submit</button>
+            </div>
         </form>
     );
 }
