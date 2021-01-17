@@ -1,11 +1,6 @@
-export function increment() {
+export function addActivityAction(newActivity) {
     return {
-        type: 'INCREMENT'
-    }
-}
-
-export function decrement() {
-    return {
-        type: 'DECREMENT'
+        type: 'ADD_ACTIVITY',
+        payload: {newActivity}
     }
 }
